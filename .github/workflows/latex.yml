@@ -7,15 +7,10 @@ jobs:
   Clone-Repo:
     runs-on: ubuntu-latest
     steps:
-      run: |
-        echo "Job triggered by a ${{ github.event_name }} event."
-        echo "Cloning repository..."
+      - run: echo "Job triggered by a ${{ github.event_name }} event."
+      - run: echo "Cloning repository..."
       - name: Check out repository
         uses: actions/checkout@v3
-        run: |
-          echo "Repository cloned"
-          echo "Files in workspace"
-          ls ${{ github.workspace }}
       - name: Update system
         run: |
           echo "Updating with apt..."
