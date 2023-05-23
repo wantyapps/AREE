@@ -7,20 +7,25 @@ jobs:
   Clone-Repo:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Job triggered by a ${{ github.event_name }} event."
-      - run: echo "Cloning repository..."
+      run: |
+        echo "Job triggered by a ${{ github.event_name }} event."
+        echo "Cloning repository..."
       - name: Check out repository
         uses: actions/checkout@v3
-      - run: echo "Repository cloned"
-      - run: echo "Files in workspace"
-      - run: ls ${{ github.workspace }}
+        run: |
+          echo "Repository cloned"
+          echo "Files in workspace"
+          ls ${{ github.workspace }}
       - name: Update system
-      - run: echo "Updating with apt..."
-      - run: sudo apt-get update
-      - run: echo "Updated"
+        run: |
+          echo "Updating with apt..."
+          sudo apt-get update
+          echo "Updated"
       - name: Install needed tools
-      - run: sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super
-      - run: echo "Installed LaTeX and LaTeX tools"
+        run: |
+          sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super
+          echo "Installed LaTeX and LaTeX tools"
       - name: Compile to PDF
-      - run: echo "Compiling to AREE.pdf"
-      - run: make clean all
+        run: |
+          echo "Compiling to AREE.pdf"
+          make clean all
