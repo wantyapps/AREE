@@ -7,8 +7,6 @@ jobs:
   Clone-Repo:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Job triggered by a ${{ github.event_name }} event."
-      - run: echo "Cloning repository..."
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Update system
