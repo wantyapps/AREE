@@ -55,33 +55,57 @@ The peak-to-peak voltage is usually written as \(V_pp\) or \(V_{P\text-P}\)
 % \end{center}
 Resistors in series act as a single resistor. When breaking the connections between the resistors at any point in the circuit, the circuit will "open", and will stop operating.
 \[
-	R_{total} = R_1 + R_2 + \cdots + R_n
+	R_s = R_1 + R_2 + \cdots + R_n
+\]
+or in sigma notation:
+\[
+	R_s = \sum_{i = 1}^n R_i
 \]
 \subsubsection{Inductors}
 Inductors follow the same law, in that the total inductance of non-coupled inductors in series is equal to the sum of their individual inductances:
 \[
-	L_{total} = L_1 + L_2 + \cdots + L_n
+	L_s = L_1 + L_2 + \cdots + L_n
+\]
+or in sigma notation:
+\[
+	L_s =  \sum_{i = 1}^n L_i
 \]
 \subsubsection{Capacitors}
 The total capacitance of capacitors in series is equal to the reciprocal of the sum of the reciprocals of their individual capacitances:
 \[
-	\frac{1}{C_{total}} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots + \frac{1}{C_n}
+	\frac{1}{C_s} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots + \frac{1}{C_n}
+\]
+or in sigma notation:
+\[
+	\frac{1}{C_s} = \sum_{i = 1}^n \frac{1}{C_i}
 \]
 \subsection{In Parallel}
 \subsubsection{Resistors}
 To find the total resistance of all components, add the reciprocals of the resistances \(R_i\) of each component and take the reciprocal of the sum. Total resistance will always be less than the value of the smallest resistance:
 \[
-	\frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_n}
+	\frac{1}{R_p} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_n}
+\]
+or in sigma notation:
+\[
+	\frac{1}{R_p} = \sum_{i = 1}^n \frac{1}{R_i}
 \]
 \subsubsection{Inductors}
 Inductors follow the same law, in that the total inductance of non-coupled inductors in parallel is equal to the reciprocal of the sum of the reciprocals of their individual inductances:
 \[
-	\frac{1}{L_{total}} = \frac{1}{L_1} + \frac{1}{L_2} + \cdots + \frac{1}{L_n}
+	\frac{1}{L_p} = \frac{1}{L_1} + \frac{1}{L_2} + \cdots + \frac{1}{L_n}
+\]
+or in sigma notation:
+\[
+	\frac{1}{L_p} = \sum_{i = 1}^n \frac{1}{L_i}
 \]
 \subsubsection{Capacitors}
 The total capacitance of capacitors in parallel is equal to the sum of their individual capacitances:
 \[
-	C_{total} = C_1 + C_2 + \cdots + C_n
+	C_p = C_1 + C_2 + \cdots + C_n
+\]
+or in sigma notation:
+\[
+	C_p = \sum_{i = 1}^n C_i
 \]
 \section{Reactance}
 In electrical circuits, reactance is the opposition presented to alternating current by inductance and capacitance. Greater reactance gives smaller current for the same applied voltage. Reactance is similar to resistance in this respect, but does not lead to dissipation of electrical energy as heat; instead, energy is momentarily stored in the reactance, and a quarter-cycle later returned to the circuit.
